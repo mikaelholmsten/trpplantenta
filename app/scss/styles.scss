@@ -1,0 +1,266 @@
+$standard:#55749b; /* standard färg variab */
+$border-std: 8px; /* border radius variabel*/
+$color:#fdfdfd;
+//@import "header";
+@import "footer"; //footer style
+// Scss
+
+
+
+/* STANDARD FÖR HTML TAGGAR */
+h1, h2, h3, h4, h5, h6 
+    {
+        color: $standard+22%; /*ändrar färg för att bli 22% ljusare*/
+        text-align: center;    
+
+    }
+h1 
+        {font-family:  Verdana,Geneva,San-serif; font-weight:bold; font-size: 2em; line-height:25px;
+    }
+
+h2 
+{font-family: Verdana, Geneva, sans-serif; font-size: 1.5em; font-weight:bold;margin: 10px 2px 2px 0px;}
+
+h3
+{font-family: Verdana, Geneva, sans-serif; font-size:13px; font-weight:bold; line-height:20px;}
+
+a, a:hover, a:active, a:link {color:yellow}
+a {text-decoration:none;}
+
+a:hover 
+{
+    text-decoration: underline;
+    font-size: 150%;
+}
+
+
+
+
+.container
+    { display: flex;
+     flex-flow: column;
+      
+    }
+
+.logo /*loggans attri*/
+    {
+        background-color: white
+    }
+
+@mixin boxstyle //generell stil i boxar
+    {
+        padding: 2%;     
+        border: 1px solid black;
+        border-radius: $border-std;
+        opacity:0.94;
+        margin: 4px;
+        display: block;
+        background-color: white;
+        
+    }
+    
+.box 
+    {
+        @include boxstyle;
+    }
+
+.box3 
+    {
+    order: -1; /* ändrar ordningen på box3 i mobiltläge för att fånga upp icke medlemmar */
+    background-color: yellow;
+    }
+
+
+
+aside
+    {        
+        order: 1;
+        
+        display: flex;
+        opacity:0.9;
+        background-color: white;
+        padding: 2px;
+        color:black;
+        text-align: left;
+    }
+
+
+.medlem-text
+    {
+        font-size: 1.1em; /* standard färg för alla text*/
+        color: $standard;
+        text-align:center;
+        }
+
+.medlem         /* medlem inlog*/
+    {
+        color: white;
+        
+        text-decoration: none;
+        padding: 5px;
+        font-size: 0.8em;
+        display: inline-block;
+        background-color: blue;
+        border-radius: $border-std;
+    }
+
+.ejmedlem    /* locktext för icke medlemmar Gratis assistansförsäk*/
+    {
+        color: red;
+        background: white;
+    //    opacity:0.75;
+        text-decoration: none;
+        padding: 5px;
+        
+        font-size: 1em;
+    }
+.ejmedlem:hover {color: green;}
+
+figure // regler för bilden
+    { 
+    max-width: 80%;
+    background-position: center center;
+    background-size:  cover;
+    justify-content: space-around; 
+    }
+
+header 
+    { 
+        background-image: url("../images/vintervag.jpg");	
+    	background-position: center center;
+		background-repeat:  no-repeat;
+		background-size:  cover;
+		background-color: #c9c9c9;
+        display: flex;
+        justify-content: space-around;  
+    }
+
+.fa-times, .fa-bars
+    {
+        display: flex;
+        color: white;
+        font-size: 3em;
+        padding: 40px;
+    }
+
+
+#wrapper 
+    {
+        position: relative;
+        justify-content: center;
+    }
+
+
+#nav-toggle
+    {
+        display: none; /* dölj ch */
+    }
+
+#nav-toggle:checked + #wrapper nav  
+    {
+        display: block;
+       /* mobil meny cb checkad */    
+    }
+
+#nav-toggle:checked + #wrapper header .fa-bars 
+    {
+        display: block; /* visar hamburg ch checkad */
+    }
+
+nav    /* nästat in lite kod*/
+{
+    display: none; /* dold mobilmeny */
+ul
+    {
+        
+        text-decoration: none;
+        list-style-type: none;
+        text-align: center;
+        background-color: $standard+10%;
+        display: flex;
+        flex-flow: column wrap; /* mobil meny kolumn*/
+        font-size: 1.2em;
+        display: block;
+        padding: 3px;
+        margin: 5px;
+    }
+}
+
+.search-form 
+    {
+        display: none;
+    }
+
+
+
+
+//Brytpunkt för desktop
+@media all and (min-width: 760px) {
+  /* Döljer meny trigger för desktop */
+  
+    .container 
+    {
+        
+        flex-flow: nowrap;
+    }
+    
+    .box1 {order: -1;}
+    .box3 {order: 3;}
+    header > label 
+    {
+        display: none;
+    }
+    /* visar menyn för desktop */
+
+    /* nest mer cod*/
+    nav 
+    {
+            display: block;
+        ul
+        {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            background-color: $standard;
+        }
+    }
+
+    .search-form /*sök rutan visas i desktop*/
+        {
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 15px;
+            order:99;
+        }
+
+    .search 
+        {
+            padding: 8px 1px;
+            background: #fdfbfb;
+            border: 1px solid $standard;
+            color: black;
+        }
+  
+    .button
+        {
+            position: relative;
+            padding: 8px 15px;
+            left: -10px;
+            border: 1px solid $standard;
+            background-color: white;
+            color: black;
+        }
+    
+    .ejmedlem
+        {
+            color: red;
+            background: white;
+            opacity:0.91;
+            text-decoration: none;
+            font-size: 1em;
+            display: inline-block;
+        }
+    
+}

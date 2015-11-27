@@ -1,0 +1,1 @@
+alert ('hej, världen detta är mitt första jävla javascript!')

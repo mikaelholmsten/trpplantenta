@@ -1,0 +1,66 @@
+/*----CSS header
+----*/
+
+
+
+
+
+
+
+
+#header 
+    {
+        color:aqua;
+        max-height: 3px;
+        display: flex;
+        justify-content: right; 
+        
+        background-image: url("../images/adrlastbil.jpeg")	;	
+    	background-position: center center;
+		background-repeat:  no-repeat;
+		background-attachment: fixed;
+		background-size:  cover;
+		background-color: #f25757;
+    }
+    }
+a {
+	background-color: #d1851f;
+}
+
+a:link {
+    text-decoration: line-through;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+    text-decoration: none;
+}
+
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+    outline: none;
+}
+
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+

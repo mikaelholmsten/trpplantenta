@@ -1,0 +1,30 @@
+/*----CSS Footer och några övriga regler
+----*/
+
+
+body {
+    
+	margin: 3px;
+}
+a { font-size: 1.1em}
+
+#footer { margin: 2px;
+    display: flex;
+    position: static;
+    justify-content: center;
+    border-right: 5em;
+    width:98.5%;
+    bottom: 3px;
+    border-radius: $border-std;
+    background-color:$standard;
+    
+  
+}
+
+.footerdivar{
+    margin: 7px;
+    display: inline-block;
+    text-align: center;
+}
+
+
