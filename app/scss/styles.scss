@@ -67,12 +67,17 @@ a:hover
 .box3 
     {
     order: -1; /* ändrar ordningen på box3 i mobiltläge för att fånga upp icke medlemmar */
+        
+        /* prio 5 i matrisen i mobil*/
+ 
+        
     background-color: yellow;
     }
 
 
 
-aside
+aside /* prio 3 i matrisen i mobil verksamhetsiden*/   
+
     {        
         order: 1;
         
@@ -168,6 +173,7 @@ header
     }
 
 nav    /* nästat in lite kod*/
+     /* prio 4 i matrisen i mobil*/
 {
     display: none; /* dold mobilmeny */
 ul
@@ -186,7 +192,7 @@ ul
     }
 }
 
-.search-form 
+.search-form  /* prio 0 i matrisen i mobil*/
     {
         display: none;
     }
@@ -226,6 +232,7 @@ ul
     }
 
     .search-form /*sök rutan visas i desktop*/
+     /* prio 5 i matrisen i desktop*/
         {
             display: block;
             display: flex;
