@@ -6,9 +6,9 @@ body {
     
 	margin: 3px;
 }
-a { font-size: 1.1em}
+a { font-size: 1.2em}
 
-#footer { margin: 2px;
+#footer { margin: 3px;
     display: flex;
     position: static;
     justify-content: center;
@@ -16,7 +16,7 @@ a { font-size: 1.1em}
     width:98.5%;
     bottom: 3px;
     border-radius: $border-std;
-    background-color:$standard;
+    background-color:$color;
     
   
 }
